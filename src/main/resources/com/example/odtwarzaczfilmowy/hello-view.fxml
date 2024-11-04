@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="CENTER" prefHeight="314.0" prefWidth="332.0" spacing="20.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.odtwarzaczfilmowy.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+   <children>
+      <Label text="Odtwarzacz filmowy">
+         <font>
+            <Font name="Berlin Sans FB" size="24.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" prefHeight="226.0" prefWidth="292.0">
+         <children>
+            <VBox alignment="CENTER" prefHeight="188.0" prefWidth="137.0">
+               <children>
+                  <Label text="Lista filmów">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton mnemonicParsing="false" text="Film1">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="group1" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" text="Film2" toggleGroup="$group1" />
+                  <RadioButton mnemonicParsing="false" text="Film3" toggleGroup="$group1" />
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="182.0" prefWidth="128.0">
+               <children>
+                  <Label text="Lista motywów">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <RadioButton mnemonicParsing="false" text="Bialy">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="group2" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton mnemonicParsing="false" text="Czarny" toggleGroup="$group2" />
+                  <RadioButton mnemonicParsing="false" text="Zielony" toggleGroup="$group2" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+      <Button mnemonicParsing="false" onAction="#Przejdz" text="Przejdź do odtwarzania" />
+   </children>
+</VBox>
